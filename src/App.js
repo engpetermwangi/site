@@ -43,13 +43,18 @@ const links = [
   },
 ];
 
+const skills = ["HTML", "CSS", "JavaScript", "React", "Python", "Go", "Kotlin"];
+
 const App = () => {
   return (
-    <div className="center">
-      <img src={peter} alt="Peter" />
-      {links.map((linkProps) => (
-        <AnimatedLink key={linkProps.link} {...linkProps} />
-      ))}
+    <div className="container">
+      <div className="center">
+        <img src={peter} alt="Peter" />
+        {links.map((linkProps) => (
+          <AnimatedLink key={linkProps.link} {...linkProps} />
+        ))}
+      </div>
+      <Skills skills={skills} />
     </div>
   );
 };
@@ -75,5 +80,18 @@ const AnimatedLink = ({ link, imageSrc, imageAlt, offset }) => {
     </motion.a>
   );
 };
+
+const Skills = ({ skills }) => (
+  <div className="skill-container">
+    <h2>Backed by:</h2>
+    <div className="scrollable">
+      {skills.map((skill) => (
+        <span className="skill" key={skill}>
+          {skill}
+        </span>
+      ))}
+    </div>
+  </div>
+);
 
 export default App;
