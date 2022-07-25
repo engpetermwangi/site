@@ -8,6 +8,7 @@ import linkedinLogo from "./pics/linkedin.png";
 import codewarsLogo from "./pics/codewars.png";
 import codesandboxLogo from "./pics/codesandbox.svg";
 import resume from "./pics/resume.svg";
+import resumePDF from "./resume/resume.pdf";
 
 const links = [
   {
@@ -35,7 +36,7 @@ const links = [
     offset: (13 / 10) * Math.PI,
   },
   {
-    link: "https://petermwangi.me/resume",
+    link: resumePDF,
     imageSrc: resume,
     imageAlt: "Resume",
     offset: (-3 / 10) * Math.PI,
